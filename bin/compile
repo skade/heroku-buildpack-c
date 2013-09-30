@@ -7,6 +7,8 @@ set -o pipefail
 BUILD_DIR=$1
 CACHE_DIR=$2
 
+find $BUILD_DIR -type f
+
 export PATH="$BUILD_DIR/.apt/usr/lib/rust/rust-nightly/bin:$BUILD_DIR/.apt/usr/bin:$PATH"
 export LD_LIBRARY_PATH="$BUILD_DIR/.apt/usr/lib/rust/rust-nightly/lib:$BUILD_DIR/.apt/usr/lib:$LD_LIBRARY_PATH"
 export INCLUDE_PATH="$BUILD_DIR/.apt/usr/lib/rust/rust-nightly/include:$BUILD_DIR/.apt/usr/include:$INCLUDE_PATH"
